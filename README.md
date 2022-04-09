@@ -125,7 +125,7 @@ A REST API is provided with seed data for blog posts and comments. The REST API 
 **POST** `/posts/{id}/comments` _Add comment to single blog post_<br>
 **PUT** `/comments/{id}` _Update single comment_<br>
 
-## Delivering to LetsGetChecked
+## Delivering to ???Checked
 
 Please provide a link to a git/bitbucket/etc repository which contains the application code.
 
