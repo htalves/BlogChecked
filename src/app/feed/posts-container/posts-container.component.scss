@@ -1,0 +1,18 @@
+$list--padding: 3em;
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__list {
+        list-style: none;
+        padding-left: $list--padding;
+        padding-right: $list--padding;
+        margin: 0;
+    }
+
+    &__post {
+        margin-bottom: 2em;
+    }
+}

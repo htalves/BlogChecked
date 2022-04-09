@@ -1,0 +1,21 @@
+<section class="comments">
+    <h4>{{ 'Comments' }}</h4>
+    <ng-container *ngIf="!isLoading; else loading">
+        <ul class="comments__list" *ngIf="comments.length > 0; else noComments">
+            <li class="comments__entry" *ngFor="let comment of comments; trackBy:commentsTrackBy">
+                <app-comment-summary [comment]="comment" (onReplyAdded)="onCommentAddedHandler($event)"></app-comment-summary>
+            </li>
+        </ul>
+
+        <h4>Add new comment</h4>
+        <app-add-comment (onCommentAdded)="onCommentAddedHandler($event)"></app-add-comment>
+    </ng-container>
+</section>
+
+<ng-template #noComments>
+    <p class="comments__no-data">No comments added yet. Be the first!</p>
+</ng-template>
+
+<ng-template #loading>
+    <pre>&lt; Loading information, insert cute screen! &gt;</pre>
+</ng-template>

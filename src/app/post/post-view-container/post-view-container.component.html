@@ -1,0 +1,10 @@
+<a href="/">Home</a>
+
+<section *ngIf="post; else loading">
+    <app-post-summary [post]="post"></app-post-summary>
+    <app-comments-container [post-id]="post.id"></app-comments-container>
+</section>
+
+<ng-template #loading>
+    <pre data-unit-test="loading-screen">&lt; Loading information, insert cute screen! &gt;</pre>
+</ng-template>

@@ -1,0 +1,13 @@
+.add-comment {
+    display: flex;
+    flex-direction: column;
+
+    &__submit {
+        width: 5em;
+    }
+}
+
+input.ng-invalid,
+textarea.ng-invalid {
+    border: 1px red solid;
+}

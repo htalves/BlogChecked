@@ -1,0 +1,12 @@
+<section class="feed">
+    <h1>{{ 'Feed' | uppercase }}</h1>
+    <ul class="feed__list" *ngIf="!isLoading; else loading">
+        <li class="feed__post" *ngFor="let post of posts$ | async; trackBy:postTrackBy">
+            <app-post-summary [post]="post" [has-title-link]="true"></app-post-summary>
+        </li>
+    </ul>
+</section>
+
+<ng-template #loading>
+    <pre data-unit-test="loading-screen">&lt; Loading information, insert cute screen! &gt;</pre>
+</ng-template>

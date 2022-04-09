@@ -1,0 +1,14 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px dashed black;
+
+    &__title {
+        padding: 0;
+        margin: 1em 0 0;
+    }
+
+    &__information {
+        font-size: .7em;
+    }
+}

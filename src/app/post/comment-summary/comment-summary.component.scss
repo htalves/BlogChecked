@@ -1,0 +1,24 @@
+$depth--base-margin: 1em;
+@mixin depth-list {
+    @for $i from 0 through 5 {
+        .depth-#{$i} { margin-left: calc(#{$depth--base-margin} * #{$i}); }
+    }
+}
+
+@include depth-list;
+
+.comment {
+    padding: .1em 1em .5em;
+    border-left: 1px black dashed;
+    background-color: #eee;
+
+    &__header {
+        font-size: .7em;
+        font-weight: bold;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

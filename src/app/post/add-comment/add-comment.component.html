@@ -1,0 +1,11 @@
+<section>
+    <form [formGroup]="addCommentForm" class="add-comment" (ngSubmit)="onFormSubmit()">
+        <label>Who are you?</label>
+        <input type="text" formControlName="username" />
+
+        <label>Comment</label>
+        <textarea rows="5" formControlName="content"></textarea>
+
+        <button type="submit" class="add-comment__submit" [disabled]="!addCommentForm.valid">Sumbit</button>
+    </form>
+</section>

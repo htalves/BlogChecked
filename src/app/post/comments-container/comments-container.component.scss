@@ -1,0 +1,15 @@
+.comments {
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__entry {
+        margin-bottom: .1em;
+    }
+
+    &__no-data {
+        font-size: .7em;
+    }
+}

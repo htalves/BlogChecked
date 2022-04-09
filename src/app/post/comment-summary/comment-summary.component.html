@@ -1,0 +1,8 @@
+<article *ngIf="comment" [className]="'comment depth-'+comment.depth">
+    <p class="comment__header">#{{ comment.id }}: {{ comment.user }} ({{ comment.date }})</p>
+    <p [innerHTML]="comment.content"></p>
+    <footer class="comment__actions">
+        <button type="button" (click)="replyToComment()" data-unit-test="reply-button">Reply</button>
+    </footer>
+    <app-add-comment *ngIf="showReplyForm" (onCommentAdded)="onCommentAddedHandler($event)" data-unit-test="add-comment-form"></app-add-comment>
+</article>

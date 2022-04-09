@@ -1,0 +1,17 @@
+<article *ngIf="post" class="post">
+    <header>
+        <h1 class="post__title">
+            <a *ngIf="hasTitleLink; else soloTitle" [href]="'/post/' + post.slug">
+                <ng-container [ngTemplateOutlet]="soloTitle"></ng-container>
+            </a>
+        </h1>
+        <span class="post__information">Posted at: {{ post.publish_date }}, by {{ post.author }}</span>
+    </header>
+    <div class="post__body">
+        <span [innerHTML]="post.content"></span>
+    </div>
+</article>
+
+<ng-template #soloTitle>
+    {{ post.title }}
+</ng-template>
