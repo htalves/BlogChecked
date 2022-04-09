@@ -1,6 +1,6 @@
-# LetsGetChecked front end challenge REST API
+# ???Checked front end challenge REST API
 
-> Starter REST API for LetsGetChecked front end coding challenge
+> Starter REST API for ???Checked front end coding challenge
 
 ## Getting started
 
